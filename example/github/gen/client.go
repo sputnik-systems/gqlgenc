@@ -6,7 +6,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/Yamashou/gqlgenc/clientv2"
+	"github.com/sputnik-systems/gqlgenc/clientv2"
 )
 
 type GithubGraphQLClient interface {
