@@ -5,7 +5,6 @@ import (
 	"fmt"
 
 	"github.com/99designs/gqlgen/api"
-	codegenconfig "github.com/99designs/gqlgen/codegen/config"
 	"github.com/99designs/gqlgen/plugin"
 	"github.com/99designs/gqlgen/plugin/modelgen"
 	"github.com/sputnik-systems/gqlgenc/config"
@@ -28,14 +27,6 @@ func mutateHook(cfg *config.Config) func(b *modelgen.ModelBuild) *modelgen.Model
 							break
 						}
 					}
-				}
-			} else {
-				for _, field := range model.Fields {
-					field.Tag = `json:"` + field.Name
-					if codegenconfig.IsNilable(field.Type) {
-						field.Tag += ",omitempty"
-					}
-					field.Tag += `"`
 				}
 			}
 		}
