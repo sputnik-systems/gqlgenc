@@ -11,8 +11,8 @@
 	{{ reserveImport "time" }}
 
 
-	{{ reserveImport "github.com/Yamashou/gqlgenc/graphqljson" }}
-	{{ reserveImport "github.com/Yamashou/gqlgenc/clientv2" }}
+	{{ reserveImport "github.com/sputnik-systems/gqlgenc/graphqljson" }}
+	{{ reserveImport "github.com/sputnik-systems/gqlgenc/clientv2" }}
 
 
 	{{- if .ClientInterfaceName }}
